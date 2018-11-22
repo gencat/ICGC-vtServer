@@ -12,10 +12,9 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-	  "tiles": [
-		"http://localhost:3000/{z}/{x}/{y}.pbf" 
-	  ],
-	  "maxzoom": 14
+	    "tiles": [
+        "http://172.16.156.12:3333/{z}/{x}/{y}.pbf"
+	    ]
     }
   },
   "sprite": "https://geoserveis.icgc.cat/contextmaps/sprites/sprite@1",

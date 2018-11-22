@@ -16,6 +16,8 @@ const config = {
 
 const pool = new Pool(config);
 
+const HOST = process.env.SERVER_HOST || '0.0.0.0';
+const PORT = process.env.SERVER_PORT || 3333;					   
 // Code to run if we're in the master process
 if (cluster.isMaster) {
 
@@ -71,7 +73,7 @@ if (cluster.isMaster) {
 		});
 	});
 
-	app.listen(3000, function () {
-		console.log('Example app listening on port 3000!');
+	app.listen(PORT,HOST, function () {
+		console.log('Example app listening on port '+PORT+'!');
 	});
 }
