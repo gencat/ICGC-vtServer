@@ -13,5 +13,5 @@ RUN npm install
 # Bundle app source
 COPY . .
 EXPOSE 3333
-CMD [ "npm", "nodemon" ]
+CMD [ "npm", "start" ]
 
