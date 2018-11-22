@@ -14,7 +14,8 @@
       "type": "vector",
 	  "tiles": [
 		"http://localhost:3000/{z}/{x}/{y}.pbf" 
-	  ]
+	  ],
+	  "maxzoom": 14
     }
   },
   "sprite": "https://geoserveis.icgc.cat/contextmaps/sprites/sprite@1",
@@ -6553,45 +6554,7 @@
       }
     },
     {
-      "id": "airport-label-major-copy",
-      "type": "symbol",
-      "source": "openmaptiles",
-      "source-layer": "aerodrome_label",
-      "minzoom": 10,
-      "filter": [
-        "all",
-        [
-          "has",
-          "iata"
-        ]
-      ],
-      "layout": {
-        "text-padding": 2,
-        "text-font": [
-          "FiraSans-Italic"
-        ],
-        "text-anchor": "top",
-        "icon-image": "airport_11",
-        "text-field": "{name:latin}{name:nonlatin}",
-        "text-offset": [
-          0,
-          0.6
-        ],
-        "text-size": 10,
-        "text-max-width": 9,
-        "visibility": "visible",
-        "icon-size": 1,
-        "text-optional": true
-      },
-      "paint": {
-        "text-halo-blur": 0.5,
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "#ffffff"
-      }
-    },
-    {
-      "id": "place-other-tot",
+	  "id": "place-other-tot",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "1444849242106.713"

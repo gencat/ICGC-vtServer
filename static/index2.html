@@ -53,6 +53,8 @@ var beforeMap = new mapboxgl.Map({
 	pitch: 45
 });
 beforeMap.addControl(new mapboxgl.NavigationControl());
+//beforeMap.showCollisionBoxes = true;
+//beforeMap.showTileBoundaries = true;
 
 var afterMap = new mapboxgl.Map({
     container: 'after',
@@ -63,6 +65,8 @@ var afterMap = new mapboxgl.Map({
 	hash: true,
 	pitch: 45
 });
+//afterMap.showCollisionBoxes = true;
+//afterMap.showTileBoundaries = true;
 
 // coordination between the two maps
   var disable = false;
