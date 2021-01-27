@@ -1,4 +1,8 @@
 # ICGC-vtServer
+
+[![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
+![stability-frozen](https://img.shields.io/badge/stability-locked-blue.svg)
+
 servidor expressjs que sirve VT directamente desde PostGIS
 
 La BD de PostGIS es quien se encarga de hacer la magia. El código de la BD está en https://github.com/gencat/ICGC-vt-postgis

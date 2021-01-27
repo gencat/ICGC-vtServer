@@ -12,6 +12,9 @@ const config = {
 	database: process.env.DB_DATABASE || 'postgres',
 	password: process.env.DB_PASS || 'postgres',
 	port: process.env.DB_PORT || 5432,
+	ssl: {
+    	rejectUnauthorized: false
+  	}
 };
 
 const pool = new Pool(config);
@@ -59,15 +62,14 @@ if (cluster.isMaster) {
 		//convert to TMS
 		//y = Math.pow(2, z) - y - 1;
 
-		//console.log(`SELECT icgc_vt.tile_pbf(${z}, ${x}, ${y})`);
+		//console.log(`SELECT public.tile_pbf(${z}, ${x}, ${y})`);
 
-		const SQL = `SELECT icgc_vt.tile_pbf(${z}, ${x}, ${y})`;
+		const SQL = `SELECT public.tile_pbf(${z}, ${x}, ${y})`;
 
-		res.setHeader('Content-Type', 'application/x-protobuf');
 		res.setHeader('Content-Type', 'application/x-protobuf');
 
 		pool.query(SQL, (err, result) => {
-			//console.log(err, result)
+			console.log(err, result)
 			//pool.end()
 			res.send(result.rows[0].tile_pbf);
 		});
